@@ -38,7 +38,6 @@ header{
 nav ul li a{
     text-decoration: none;
     border:1px solid #c4c4c4;
-   
     padding: 10px;
     border-radius: 30px;
     color: #901C1C;
@@ -97,10 +96,11 @@ main{
     header{
        width: 90vw;
        display: grid;
-       grid-template-columns: repeat(3, 1fr);
+       grid-template-columns: repeat(3,30vw);
        grid-template-rows: repeat(2,1fr);
       
     }
+   
     .logo{
        grid-area: 1/1/2/2;
     }
@@ -113,13 +113,21 @@ main{
       
         position: absolute;
         top: 30px;
-        right: -60vw;
+        right: -20vw;
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .filter {
-       grid-area: 2/1/3/3;  
+       grid-area: 2/1/3/3; 
+        
+    }
+    nav ul li {
+        display: flex;
+        flex-wrap: wrap;
        
+    }
+    nav ul li a{
+        font-size: .7rem;
         
     }
     main{
@@ -127,4 +135,16 @@ main{
         flex-direction:column;
     }
 
+}
+/* page photographer */
+.photographer-hero{
+    background-color: #FAFAFA;
+}
+.photograph-name{
+    color: #D3573C;
+    font-size: 4rem;
+}
+.photograph-local{
+    font-size: 2rem;
+    color: #901C1C;
 }
