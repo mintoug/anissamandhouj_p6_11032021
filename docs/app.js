@@ -5,4 +5,5 @@ fetch ("./base.json")
 })
 .then(function(data){
   console.log(data);
+  console.log(data.photographers[4].city);
 })

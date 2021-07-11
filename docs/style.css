@@ -40,6 +40,7 @@ nav ul li a{
     text-decoration: none;
     border:1px solid #c4c4c4;
     padding: 10px;
+    margin: 0 10px;
     border-radius: 30px;
     color: #901C1C;
     font-weight: 600;
@@ -91,6 +92,22 @@ main{
 .price{
     color: #757575;
     font-size: .8rem;
+}
+.tags{
+    display: flex;
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 200px;
+}
+.tags a{
+    text-decoration: none;
+    border:1px solid #c4c4c4;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 30px;
+    color: #901C1C;
+    font-weight: 600;
+    font-size: 1rem;
 }
 /* page d'acceuil sur mobile */
 @media screen and (max-width : 425px){
@@ -174,6 +191,7 @@ header{
 .list>li>a{
     border:1px solid #c4c4c4;
     padding: 10px;
+    margin: 0 10px;
     border-radius: 30px;
     color: #901C1C;
     font-weight: 600;
@@ -201,5 +219,42 @@ header{
     width: 20vw;
     height: 400px;
     border-radius: 50%;
-    
+}
+.choice{
+    margin-top: 100px;
+    display: flex;
+    margin-left: 100px;
+}
+.item{
+    background-color: #901C1C;
+    margin-left: 100px;
+}
+li{
+    list-style: none;
+}
+.tri{
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 20px;
+}
+.fa-sort-down{
+    margin-left: 15px;
+}
+.popular a , .date a , .titre a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #901C1C;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 7px;
+}
+.sub-item{
+    display: none;
+}
+.popular :hover .sub-item{
+    display: block;
+    position: absolute;
+    background-color: #901C1C;
+    margin-top: 15px;
 }
