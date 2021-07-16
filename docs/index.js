@@ -1,6 +1,5 @@
 /**
  * VARIABLES Declaration
- * CONST and LET
  * -------------------------------------------------------
 */
 const accesslink = document.getElementById("accessible");
@@ -71,7 +70,7 @@ class Photographer {
     let listTags = this.tags;
     let textTag = ``;
     for (let tag in listTags) {
-      textTag += `<li class="photographer_tagg_link"><a href="index.html?tag=${listTags[tag]}"><span aria-label="tag">#${listTags[tag]}</span></a></li>`;
+      textTag += `<li class="photographer-tags-link"><a href="index.html?tag=${listTags[tag]}"><span aria-label="tag">#${listTags[tag]}</span></a></li>`;
     }
     photographersList.innerHTML += `<li class="space-card">
                                             <a href="pages/photographer.html?id=${this.id}&filt=Popular&tag=off" aria-label="${this.name}">
@@ -135,7 +134,7 @@ function showPhotographers(obj) {
     newPhotographer.getHomeInfo();
   }
 
-  const tagItems = document.querySelectorAll(".photographer_tagg_link");
+  const tagItems = document.querySelectorAll(".photographer-tags-link");
 
   tagItems.forEach(item => {
     item.addEventListener("click", function (e) {
