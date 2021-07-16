@@ -75,7 +75,7 @@ class Photographer {
     }
     photographersList.innerHTML += `<li class="space-card">
                                             <a href="pages/photographer.html?id=${this.id}&filt=Popular&tag=off" aria-label="${this.name}">
-                                                <img src="../photos/id/${this.portrait}" aria-label="${this.name}" class="photographer-photo-home"><br>
+                                                <img src="./photos/id/${this.portrait}" aria-label="${this.name}" class="photographer-photo-home"><br>
                                                 <h2 class="name">${this.name}</h2>
                                             </a>
                                             <p role="text paragraph" class="comment">
