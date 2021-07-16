@@ -5,109 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Fishaye</title>
 </head>
 
 <body>
-<!-- partie header -->
-    <header>
-        <a href="index.html" class="logo"><img src="./Photos/logo.jpg" alt="logo fishaye"></a>
-        <nav class="filter">
-        <ul>
-            <li><a href="">#Portrait</a></li>
-            <li><a href="">#Art</a></li>
-            <li><a href="">#Fashion</a></li>
-            <li><a href="">#Architecture</a></li>
-            <li><a href="">#Travel</a></li>
-            <li><a href="">#Sport</a></li>
-            <li><a href="">#Animals</a></li>
-            <li><a href="">#Events</a></li>
-        </ul>
-        <nav>
-        <div class="title">
-            <a href="#" >Nos photographes</a>
-        </div>
+    <a href="#photographers" aria-label="Passer au contenu" class="accessibility" tabindex="1" id="accessible">Passer au contenu</a>
+    <!-- partie header -->
+
+    <header class="header-banner">
+        <a href="index.html" aria-label="FishEye" role="image link">
+            <img src="./Photos/logo.jpg" alt="FishEye Home page" class="header-banner_logo">
+        </a>
+        <nav class="navigation" role="links">
+            <ul class="navigation-tags"></ul>
+        </nav>
+
     </header>
     <!-- partie principale -->
     <main>
-        <section class="photograph photograph1">
-            <a href="page-photographer.html">
-            <img src="./Photos/Mimi/Portrait_Nora.jpg" alt="portrait d'une femme aux lunettes">
-            <div class="name">Mimi Keel</div>
-            </a>
-            <p class="local">London, UK </p><p class="comment">Voir le beau dans le quotidien </p><p class="price">400€/jour</p>
-            <ul class="tags">
-                <li><a href="">#Portrait</a></li>
-                <li><a href="">#Travel</a></li>
-                <li><a href="">#Animals</a></li>
-                <li><a href="">#Events</a></li>
+        <h1 class="title" role="header">Nos photographes</h1>
+        <span id="error-json"></span>  
+        <div class="b-photographers" id="photographers">
+            <ul class="photographer">
             </ul>
-        </section>
-        <section class="photograph photograph2">
-            <a href="">
-            <img src="./Photos/Ellie Rose/Architecture_Horseshoe.jpg" alt="image abstraite noir et blanc">
-            <div class="name">Ellie-Rose Wilkens</div>
-            </a>
-            <p class="local">Paris, France</p><p class="comment">Ttravaille suer des compositions complexes</p><p class="price">250€/jour</p>
-            <ul class="tags">
-                <li><a href="">#Architecture</a></li>
-                <li><a href="">#Sport</a></li>
-            </ul>
-        </section>
-        <section class="photograph photograph3">
-            <a href="">
-            <img src="./Photos/Tracy/Fashion_Urban_Jungle.jpg" alt="une femme blonde au milieu de la rue">
-            <div class="name">Tracy Galindo</div>
-            </a>
-            <p class="local">Montreal, Canada </p><p class="comment">Photographe freelance </p><p class="price">500€/jour</p>
-            <ul class="tags">
-                <li><a href="">#Art</a></li>
-                <li><a href="">#Fashion</a></li>
-                <li><a href="">#Events</a></li>
-            </ul>
-        </section>
-        <section class="photograph photograph4">
-            <a href="">
-            <img src="./Photos/Nabeel/Travel_Outdoor_Baths.jpg" alt="des gens qui nagent">
-            <div class="name">Nabeel Bradford</div>
-            </a>
-            <p class="local">Mexico Cty, Mexico</p><p class="comment">Je vais toujours de l'avant</p><p class="price">350/jour</p>
-            <ul class="tags">
-                <li><a href="">#Portrait</a></li>
-                <li><a href="">#Travel</a></li>
-            </ul>
-        </section>
-        <section class="photograph photograph5">
-            <a href="">
-            <img src="./Photos/Rhode/Fashion_Melody_Red_on_Stripes.jpg" alt="une femme noire portant une longue robe rouge">
-            <div class="name">Rodhe Dubois </div>
-            </a>
-            <p class="local">Barcelone, Spain </p><p class="comment">Créatrice de souvenis</p><p class="price">375€/jour</p>
-            <ul class="tags">
-                <li><a href="">#Fashion</a></li>
-                <li><a href="">#Sport</a></li>
-                <li><a href="">#Animals</a></li>
-                <li><a href="">#Events</a></li>
-            </ul>
-        </section>
-        <section class="photograph photograph6">
-            <a href="">
-            <img src="./Photos/Marcel/Travel_Tower.jpg" alt="un cité asiatique au coucher du soleil">
-            <div class="name">Marcel Nikolic</div>
-            </a>
-            <p class="local">Berlin, Germany</p><p class="comment">Toujours à la recherche de la photo</p><p class="price">300€/jour</p>
-            <ul class="tags">
-                <li><a href="">#Travel</a></li>
-                <li><a href="">#Architecture</a></li>
-            </ul>
-        </section>
-
+        </div>
     </main>
-
-   <script src="app.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
