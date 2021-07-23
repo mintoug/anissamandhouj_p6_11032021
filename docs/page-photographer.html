@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -8,52 +8,56 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
     crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css">
-    <title>Photogpapher</title>
+    <script src="https://kit.fontawesome.com/25333533ea.js" crossorigin="anonymous"></script>
+    <title>fisheye-Photogpapher-page</title>
 </head>
 
 <body>
 
-    <header>
-        <a href="index.html" class="logo"><img src="./Photos/logo.jpg" alt="logo fishaye"></a>
-    </header>
-    <div class="main">
-        <section class="photographer-hero">
-
-            <div class="introduce">
-                <p class="photograph-name"> Mimi Keel</p>
-
-                <p class="photograph-local">London, UK </p>
-                </br>
-                <p class="photograph-comment">Voir le beau dans le quotidien </p>
-                </br>
-                <ul class="list">
-                    <li><a href="">#portrait</a>
-                        <a href="">#events</a>
-                        <a href="">#travel</a>
-                        <a href="">#animals</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="" class="contact">contactez-moi</a>
-            <img src="./Photos/Mimi/Portrait_Nora.jpg" alt="" class="portrait">
-        </section>
-        <div class="choice">
-            <p class="tri">trier par </p>
-            <div class="item">
-                <ul>
-                    <li class="popular"><a href="#">Popularité<i class="fas fa-sort-down"></i></a></li>
-                    <div class="sub-item">
-                        <ul>
-                            <li class="date"><a href="#">Date</a></li>
-                            <li class="titre"><a href="#">Titre</a></li>
-                        </ul>
+    <header class="header-banner">       
+        <a href="index.html" aria-label="FishEye" role="image link" tabindex="1">
+            <img src="./Photos/logo.jpg" alt="FishEye Home page" class="header-banner_logo">
+        </a>  
+    </header> 
+    <main>        
+        <section class="b-idPhotographer">
+            <div class="idDetails"></div>  
+            <button name="contact" class="btn-contact" aria-haspopup="dialog" aria-controls="formContact" tabindex="5">Contactez-moi</button>               
+            <div class="idPicture" tabindex="6"></div>            
+        </section>    
+ <!-- dropdown menu              -->
+        <section class="b-filter">
+            <p tabindex="8">Trier par :</p>            
+            <div class="filter-dropdown">
+                <button id="filter-0" class="filter-dropdown_link" aria-haspopup="true" aria-expanded="false" tabindex="9">
+                    <span id="filter-selected" class="filter-dropdown_link--content">Popularité</span>
+                    <i id="filterIcon" class="fas fa-chevron-down"></i>                    
+                </button>
+                <div class="dropdown-items">
+                    <div class="dropdown-items_content">
+                        <button id="filter-1" class="dropdown-items_link" tabindex="10">Date</button>
+                        <button id="filter-2" class="dropdown-items_link" tabindex="11">Titre</button>
                     </div>
-                </ul>
-            </div>
-        </div>
-    </div>
+                </div>
+            </div>            
+        </section> 
+ <!-- photos et videos         -->
+        <section class="b-works">
+            <ul class="mediasList"></ul>
+        </section>
+        <section id="lightbox" class="modal-lightbox" role="dialog" aria-label="Agrandissement de l'image">            
+            <span class="close-lightbox"><i class="fas fa-times" role="button" aria-label="Fermer la fenêtre"></i></span>
+            <div class="modalLight-content"></div>
+            <a class="previous"><i class="fas fa-chevron-left" role="link" aria-label="Image précédente"></i></a>
+            <a class="next"><i class="fas fa-chevron-right" role="link" aria-label="Image suivante"></i></a>
+        </section>           
+    </main>      
+
+
+   
     <script src="app.js"></script>
-    <script src="photographer.js></script>
+    <script src="photographer.js"></script>
+
 </body>
 
 </html>

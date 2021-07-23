@@ -1,6 +1,5 @@
 /**
  * VARIABLES Declaration
- * -------------------------------------------------------
 */
 const accesslink = document.getElementById("accessible");
 const photographersList = document.querySelector(".photographer");
@@ -14,7 +13,7 @@ let myTagFilter = [];
 
 /**
  * FETCH METHOD
- * ---------------------------------------------------
+ * ------------
 */
 
 fetch(requestURL)
@@ -51,7 +50,7 @@ window.addEventListener("keydown", function (e) {
  * CLASS PHOTOGRAOHER
  * Function : createPhotographer
  * Description : display the photographer's info
- * --------------------------------------------------
+
 */
 
 class Photographer {
@@ -73,7 +72,7 @@ class Photographer {
       textTag += `<li class="photographer-tags-link"><a href="index.html?tag=${listTags[tag]}"><span aria-label="tag">#${listTags[tag]}</span></a></li>`;
     }
     photographersList.innerHTML += `<li class="space-card">
-                                            <a href="pages/photographer.html?id=${this.id}&filt=Popular&tag=off" aria-label="${this.name}">
+                                            <a href="page-photographer.html?id=${this.id}&filt=Popular&tag=off" aria-label="${this.name}">
                                                 <img src="./photos/id/${this.portrait}" aria-label="${this.name}" class="photographer-photo-home"><br>
                                                 <h2 class="name">${this.name}</h2>
                                             </a>
@@ -93,8 +92,7 @@ class Photographer {
  * FUNCTION showAllTags()
  * Description : create an array of tags and display them in a list
  * Parameter : JSON object 'photographers'
- * -----------------------------------------------------------------
-*/
+ */
 
 function showAllTags(obj) {
   for (let i = 0; i < obj.length; i++) {
@@ -116,8 +114,7 @@ function showAllTags(obj) {
  *      display the photographers's list
  *      and by a tag's click, filtering the list * 
  * Parameter : JSON object 'photographers'
- * ---------------------------------------------------
-*/
+ */
 function showPhotographers(obj) {
   for (let item of obj) {
     for (let tag of item.tags) {
