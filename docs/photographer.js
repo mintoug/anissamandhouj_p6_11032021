@@ -79,7 +79,7 @@ class Photographer {
 
 
 
-    /**
+    /*
  * FUNCTION showAllDatas(object JSON)
 
  */

@@ -33,7 +33,7 @@ header{
     height: 100px;
     width: 90vw;
     margin:0 50px;
-
+    margin-bottom: 200px;
 }
 .logo{
     grid-area: 1/1/2/2; 
@@ -84,7 +84,7 @@ nav ul li a{
     display: none;
   }
   
-.photographer{
+  .photographer{
     display :grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
