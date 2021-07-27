@@ -13,7 +13,6 @@ let myTagFilter = [];
 
 /**
  * FETCH METHOD
- * ------------
 */
 
 fetch(requestURL)
@@ -91,7 +90,6 @@ class Photographer {
 /**
  * FUNCTION showAllTags()
  * Description : create an array of tags and display them in a list
- * Parameter : JSON object 'photographers'
  */
 
 function showAllTags(obj) {
@@ -113,7 +111,6 @@ function showAllTags(obj) {
  * Description : 
  *      display the photographers's list
  *      and by a tag's click, filtering the list * 
- * Parameter : JSON object 'photographers'
  */
 function showPhotographers(obj) {
   for (let item of obj) {

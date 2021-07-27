@@ -52,7 +52,36 @@
             <a class="next"><i class="fas fa-chevron-right" role="link" aria-label="Image suivante"></i></a>
         </section>           
     </main>      
-
+    <section role="dialog" aria-hidden="true" id="formContact" class="modal-contact" aria-labelledby="dial_Title" aria-describedby="dial_Desc">
+        <div class="modal-contact_content" id="modal-content" role="document">
+            <span class="close-form"><i class="fas fa-times" aria-label="Fermer" title="Fermer le formualire"></i></span>
+            <h1 id="dial_Title" role="heading">Contactez-moi</h1>
+            <span class="photographerName" id="dial_Desc"></span>
+            <form id="frmContact" novalidate>
+                <p>
+                    <label for="firstName">Prénom</label>
+                    <input type="text" id="firstName" required title="Entrez votre prénom">
+                    <span class="error" aria-invalid="true" aria-label="error message"></span>
+                </p>
+                <p>
+                    <label for="lastName">Nom</label>
+                    <input type="text" id="lastName" required title="Entrez votre nom">
+                    <span class="error" aria-invalid="true" aria-label="error message"></span>
+                </p>
+                <p>
+                    <label for="eMail">E-mail</label>
+                    <input type="email" id="eMail" required title="Entrez votre e-mail">
+                    <span class="error" aria-invalid="true" aria-label="error message"></span>
+                </p>
+                <p>
+                    <label for="message">Votre message</label>
+                    <textarea id="message" required title="Entrez votre message"></textarea>
+                    <span class="error" aria-invalid="true" aria-label="error message"></span>
+                </p>
+                <button type="submit" class="btn-submit" aria-label="Envoi">Envoyer</button>                
+            </form>
+        </div>            
+    </section>       
 
    
     <script src="app.js"></script>
