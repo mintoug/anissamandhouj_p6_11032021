@@ -107,7 +107,7 @@ class Photographer {
  * DOM Element : Filter button
  * Description : 
  * On click > display the list of filters .......   function toggleFilter()
- *          > reorder the content on selection ..   function moceToFirst(element-content)
+ *          > reorder the content on selection ..   function moveToFirst(element-content)
  * -----------------------------------------------------------------------------------------------------
  */
 
@@ -144,7 +144,6 @@ function toggleFilter () {
  * Parameter : element content (Popularité / Date / Titre)
  * Description : 
  * reorganize the menu according the user's choice
- * -----------------------------------------------------------------------------------------------------
  */
 
 function moveToFirst (valItem) {
@@ -171,7 +170,6 @@ function moveToFirst (valItem) {
  * FILTER SELECTED VALUE  
  * Description : 
  * according the URL parameter "filt", change the filter selected
- * -----------------------------------------------------------------------------------------------------
  */
 switch (filterType) {
     case "Popular" : 
@@ -192,7 +190,6 @@ switch (filterType) {
  * On click > display the list of filters .......   function toggleFilter()
  *          > reorder the content on selection ..   function moceToFirst(element-content)
  *          > reload page and replace the value of the filter selected by the user
- * -----------------------------------------------------------------------------------------------------
  */
 
 dropFilterItems.forEach(item => {
@@ -215,8 +212,9 @@ dropFilterItems.forEach(item => {
     });
 });
 
-
-
+/** description: add likes
+* functions: addLikes()  , getLikes(), saveLikes()
+***/
 function addLikes(id) {
     let listOfLikes = getLikes(); 
     listOfLikes.push(id);
@@ -246,7 +244,6 @@ function saveLikes(list) {
  * Method :
  *       >> getCreateArray() : create a new array of media's photographer
  *       >> getFilterBy() : sort the previous array according url parameter
- * -----------------------------------------------------------------------------
  */
 
 const ArrayFilterBy = class {
@@ -320,7 +317,6 @@ const ArrayFilterBy = class {
  *      >> pricePerDay : price per day
  * Method :
  *      >> getTotal() : display the total of likes and the price per day
- * ---------------------------------------------------------------------
  */
 const Likes = class {
     constructor(total,price) {
@@ -606,34 +602,6 @@ function toSlide(n) {
     });     
 }
 
-/**
- * KEYEVENT CONFIGURATION
- */
 
- window.addEventListener("keydown", function(e) {
-    if(e.defaultPrevented){
-        return;     // comportement par défaut inhibé
-    }
-    if (e.key === "Escape" || e.key === "Esc") {
-        closeLightbox(myLightModal);
-    } 
-    if ((e.key==="ArrowDown") && (dropMenuItems.getAttribute("style") === "display: none;" || dropMenuItems.getAttribute("style") === null) ) {
-        toggleFilter();
-        moveToFirst(dropFilterSelected.textContent);
-    } 
-    if (e.key==="ArrowRight" && myLightModal.style.display=="block") {
-        changeSlide(1);
-    }   
-    if (e.key==="ArrowLeft" && myLightModal.style.display=="block") {
-        changeSlide(-1);
-    }   
-    if (e.key==="Enter" && myLightModal.style.display=="block") {
-        document.getElementById("video").play();
-    }       
-    if (e.key==="p" && myLightModal.style.display=="block") {
-        document.getElementById("video").pause();
-    } 
-
-});
 
 
