@@ -1,7 +1,6 @@
 /**
  * VARIABLES Declaration
  * CONST and LET
- * -------------------------------------------------------------------------
 */
 const errorText = document.getElementById("error-json");
 const dropFilterSelected = document.getElementById("filter-selected");
@@ -43,7 +42,7 @@ let slideIndex = 1;
 
 /**
  * FETCH
- * ------------------------------------------------------------
+ 
 */
 
 fetch(requestURL)
@@ -65,8 +64,7 @@ fetch(requestURL)
  * CLASS PHOTOGRAOHER INFO
  * Function : createPhotographer
  * Description : display the photographer's info
- * --------------------------------------------------------------------------------------------------------
- */
+  */
 
 class Photographer {
     constructor(id,info) {
@@ -604,10 +602,36 @@ function toSlide(n) {
 
 
 
-
 /**
  * KEYEVENT CONFIGURATION
  */
+
+ window.addEventListener("keydown", function(e) {
+    if(e.defaultPrevented){
+        return;     // comportement par défaut inhibé
+    }
+    if (e.key === "Escape" || e.key === "Esc") {
+        closeLightbox(myLightModal);
+    } 
+    if ((e.key==="ArrowDown") && (dropMenuItems.getAttribute("style") === "display: none;" || dropMenuItems.getAttribute("style") === null) ) {
+        toggleFilter();
+        moveToFirst(dropFilterSelected.textContent);
+    } 
+    if (e.key==="ArrowRight" && myLightModal.style.display=="block") {
+        changeSlide(1);
+    }   
+    if (e.key==="ArrowLeft" && myLightModal.style.display=="block") {
+        changeSlide(-1);
+    }   
+    if (e.key==="Enter" && myLightModal.style.display=="block") {
+        document.getElementById("video").play();
+    }       
+    if (e.key==="p" && myLightModal.style.display=="block") {
+        document.getElementById("video").pause();
+    } 
+
+});
+
 
 
 
