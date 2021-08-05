@@ -6,7 +6,7 @@ const errorText = document.getElementById("error-json");
 const dropFilterSelected = document.getElementById("filter-selected");
 const dropMenuItems = document.querySelector(".dropdown-items");
 const dropFilterIcon = document.getElementById("filterIcon");
-const dropFilterItems = document.querySelectorAll(".dropdown-items_link");
+const dropFilterItems = document.querySelectorAll(".dropdown-items-link");
 const dropFilterItem1 = document.getElementById("filter-1");
 const dropFilterItem2 = document.getElementById("filter-2");
 const photographerWorks = document.querySelector(".b-works");
@@ -82,7 +82,7 @@ class Photographer {
         let listTags = this.tags;
         let textTag=``;
         for (let tag in listTags) {
-            textTag +=`<li class="idDetails_tagg_link"><a aria-label="tag" href="#" tabindex="4">#${listTags[tag]}</a></li>`;
+            textTag +=`<li class="idDetails-tagg-link"><a aria-label="tag" href="#" tabindex="4">#${listTags[tag]}</a></li>`;
         }
             photographerDetails.innerHTML += `<h1 class="title-photographer" role="header" tabindex="2">${this.name}</h1>
                                                 <p class="idDetails_city" role="text" tabindex=3>${this.city}, ${this.country}</p>
@@ -324,8 +324,8 @@ const Likes = class {
 
     getTotal() {
         photographerWorks.innerHTML += `<div class="b-likes-price" tabindex="7">
-                                            <span class="b-likes-price_content">${this.total} <i class="fas fa-heart"></i></span>
-                                            <span class="b-likes-price_content">${this.price}€ / jour</span>
+                                            <span class="b-likes-price-content">${this.total} <i class="fas fa-heart"></i></span>
+                                            <span class="b-likes-price-content">${this.price}€ / jour</span>
                                         </div
                                         `;
 
@@ -367,7 +367,7 @@ function showAllDatas(obj) {
     }
     
     // do filter by tag
-    const tagItems = document.querySelectorAll(".idDetails_tagg_link");
+    const tagItems = document.querySelectorAll(".idDetails-tagg-link");
     tagItems.forEach(item => {
         item.addEventListener("click", function(e) {
             let valueTag = item.textContent;
@@ -565,24 +565,30 @@ function toSlide(n) {
  *      > upgrade the total of likes and the number of likes
  */
 //localStorage.clear();
- function updateLikes(likes,nbLikes) {
+
+
+function updateLikes(likes,nbLikes) {
+   
     likes.forEach(like => {
         like.addEventListener("click", function(e) {
             e.preventDefault();
+    
             if(!like.classList.contains("liked")) {
                 addLikes(this.dataset.id, this.dataset.likes);             
                 like.classList.add("liked");
-                aggLikes+=1;
-
+                aggLikes += 1 ;
+               
                 nbLikes.forEach(nb => {
                     if (nb.dataset.id == like.dataset.id) {
                         nb.innerHTML = (parseInt(nb.textContent) + 1) +" <i class='fas fa-heart liked mediaHeart'></i>";                     
-                        document.querySelector(".b-likes-price_content").innerHTML = parseInt(document.querySelector(".b-likes-price_content").textContent) + 1 +" <i class='fas fa-heart'></i>";
+                        document.querySelector(".b-likes-price-content").innerHTML = parseInt(document.querySelector(".b-likes-price-content").textContent) + 1 +" <i class='fas fa-heart'></i>";
                     }
-                });  
-            }                
+                });
+
+            } 
+               
         });
-        
+    
         if(localStorage.getItem("newLikes") !=null) {
             for(let i of JSON.parse(localStorage.getItem("newLikes"))) {
                if (i == like.dataset.id ) {
@@ -590,11 +596,12 @@ function toSlide(n) {
                 nbLikes.forEach(nb => {
                     if (nb.dataset.id == like.dataset.id) {
                         nb.innerHTML = (parseInt(nb.textContent) + 1) +" <i class='fas fa-heart liked mediaHeart'></i>"; 
-                        document.querySelector(".b-likes-price_content").innerHTML = parseInt(document.querySelector(".b-likes-price_content").textContent) + 1 +" <i class='fas fa-heart'></i>";
+                        document.querySelector(".b-likes-price-content").innerHTML = parseInt(document.querySelector(".b-likes-price-content").textContent) + 1 +" <i class='fas fa-heart'></i>";
                     }
                 });  
                }
             }
+                    
         }
         
     });     

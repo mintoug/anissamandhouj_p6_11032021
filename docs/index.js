@@ -102,7 +102,7 @@ function showAllTags(obj) {
   }
 
   for (let tags of myTagArray) {
-    navTags.innerHTML += `<li aria-label="Tag" class="tagg_link"><a href="index.html?tag=${tags}">#${tags}</a></li>`;
+    navTags.innerHTML += `<li aria-label="Tag" class="tagg-link"><a href="index.html?tag=${tags}">#${tags}</a></li>`;
   }
 }
 
