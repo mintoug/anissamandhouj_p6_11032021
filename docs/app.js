@@ -7,9 +7,6 @@
  const closeBtnFrm = document.querySelector(".close-form");
  const formItems = document.querySelectorAll("input,textarea");
  
-/**
- * FORMULARY ACTIONS
- */
  const firstName = document.getElementById("firstName");
  const lastName = document.getElementById("lastName");
  const mail = document.getElementById("eMail");
@@ -120,9 +117,6 @@
   * Keys :
   *      >> ESCAPE : close the form
   *      >> ENTER : submit the form
-  *      >> TAB : navigate on fields
-  * ------------------------------------------------
-  *
   */ 
  
  window.addEventListener("keydown", function(e) {

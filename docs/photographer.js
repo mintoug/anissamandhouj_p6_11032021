@@ -2,47 +2,45 @@
  * VARIABLES Declaration
  * CONST and LET
 */
-const errorText = document.getElementById("error-json");
-const dropFilterSelected = document.getElementById("filter-selected");
-const dropMenuItems = document.querySelector(".dropdown-items");
-const dropFilterIcon = document.getElementById("filterIcon");
-const dropFilterItems = document.querySelectorAll(".dropdown-items-link");
-const dropFilterItem1 = document.getElementById("filter-1");
-const dropFilterItem2 = document.getElementById("filter-2");
-const photographerWorks = document.querySelector(".b-works");
-const mediaList = document.querySelector(".mediasList");
+const errorText           = document.getElementById("error-json");
+const dropFilterSelected  = document.getElementById("filter-selected");
+const dropMenuItems       = document.querySelector(".dropdown-items");
+const dropFilterIcon      = document.getElementById("filterIcon");
+const dropFilterItems     = document.querySelectorAll(".dropdown-items-link");
+const dropFilterItem1     = document.getElementById("filter-1");
+const dropFilterItem2     = document.getElementById("filter-2");
+const photographerWorks   = document.querySelector(".b-works");
+const mediaList           = document.querySelector(".mediasList");
 const photographerDetails = document.querySelector(".idDetails");
 const photographerPicture = document.querySelector(".idPicture");
-const myLightModal = document.getElementById("lightbox");
-const closeBtn = document.querySelector(".close-lightbox");
-const myContentLight = document.querySelector(".modalLight-content");
-const prevIcon = document.querySelector(".previous");
-const nextIcon = document.querySelector(".next");
-const frmContact = document.getElementById("frmContact");
-const frmPhotoName = document.querySelector(".photographerName");
-const requestURL = "./base.json";
-const parsedUrl = new URL(window.location.href);
-const loc = document.location;
-const url = document.URL;
-const idWorker = parsedUrl.searchParams.get("id");
-const filterType = parsedUrl.searchParams.get("filt");
+const myLightModal        = document.getElementById("lightbox");
+const closeBtn            = document.querySelector(".close-lightbox");
+const myContentLight      = document.querySelector(".modalLight-content");
+const prevIcon            = document.querySelector(".previous");
+const nextIcon            = document.querySelector(".next");
+const frmContact          = document.getElementById("frmContact");
+const frmPhotoName        = document.querySelector(".photographerName");
+const requestURL          = "./base.json";
+const parsedUrl           = new URL(window.location.href);
+const loc                 = document.location;
+const url                 = document.URL;
+const idWorker            = parsedUrl.searchParams.get("id");
+const filterType          = parsedUrl.searchParams.get("filt");
 
 
 
-let counter = 1;
-let filterTag = parsedUrl.searchParams.get("tag");
-
-let myFilterMedias = [];
+let counter           = 1;
+let filterTag         = parsedUrl.searchParams.get("tag");
+let myFilterMedias    = [];
 let myTagFilterMedias = [];
-let aggLikes = 0;
-let slideContent = ``;
+let aggLikes          = 0;
+let slideContent      = ``;
 let dayPrice;
 let srcType;
 let slideIndex = 1;
 
 /**
  * FETCH
- 
 */
 
 fetch(requestURL)
@@ -119,7 +117,6 @@ dropFilterSelected.addEventListener("click", function(e) {
  * FUNCTION toggleFilter()
  * Description : 
  * display the filter menu with aria-expanded attribute
- * -----------------------------------------------------------------------------------------------------
  */
 
 function toggleFilter () {
@@ -140,8 +137,7 @@ function toggleFilter () {
 /**
  * FUNCTION moveToFirst()
  * Parameter : element content (Popularité / Date / Titre)
- * Description : 
- * reorganize the menu according the user's choice
+ * Description : reorganize the menu according the user's choice
  */
 
 function moveToFirst (valItem) {
@@ -186,7 +182,7 @@ switch (filterType) {
  * DOM Element : filter list element
  * Description : 
  * On click > display the list of filters .......   function toggleFilter()
- *          > reorder the content on selection ..   function moceToFirst(element-content)
+ *          > reorder the content on selection ..   function moveToFirst(element-content)
  *          > reload page and replace the value of the filter selected by the user
  */
 
@@ -407,7 +403,6 @@ function showAllDatas(obj) {
 /**
  * FACTORY METHOD
  * Use :Type of Media (image or video)
- * -----------------------------------------------------------
 */
 
 class MediasType {
@@ -485,11 +480,11 @@ function factory(type,obj,counter) {
  * FUNCTIONS FOR LIGHTBOX
  * Description: 
  *      > carrousel : modal lightbox calling next functions :
- *              >> openLightbox : open the modal
- *              >> closeLightbox : close the modal
- *              >> showSlide : display media as slide
- *              >> changeSlide : navigate on slide
- *              >> toSlide : display the media clicked
+ *               openLightbox : open the modal
+ *               closeLightbox : close the modal
+ *               showSlide : display media as slide
+ *               changeSlide : navigate on slide
+ *               toSlide : display the media clicked
  */
 
 function carrousel(listMedia) {    
@@ -577,7 +572,7 @@ function updateLikes(likes,nbLikes) {
                 addLikes(this.dataset.id, this.dataset.likes);             
                 like.classList.add("liked");
                 aggLikes += 1 ;
-               
+                              
                 nbLikes.forEach(nb => {
                     if (nb.dataset.id == like.dataset.id) {
                         nb.innerHTML = (parseInt(nb.textContent) + 1) +" <i class='fas fa-heart liked mediaHeart'></i>";                     
@@ -601,9 +596,7 @@ function updateLikes(likes,nbLikes) {
                 });  
                }
             }
-                    
-        }
-        
+       } 
     });     
 }
 

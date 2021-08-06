@@ -643,7 +643,16 @@ textarea {
  .photographer{
    padding-top: 4rem;
  }
-  
+ .title-photographer{
+margin-left: -.5rem;
+font-size: 1.5rem;
+ } 
+ .idDetails{
+   margin-left: -1rem;
+ }
+ .idDetails>p{
+   margin-left: -.5rem;
+ }
   .idDetails-tagg-link{
     display: flex;
     flex-wrap: wrap;
@@ -658,12 +667,9 @@ textarea {
   .idPicture img{
     width: 6rem;
     height: 6rem;
-    margin-left: -2rem;
+    margin-left: -.8rem;
   }
-  .title-photographer{
-    font-size: 2rem;
-  }
-  .idDetails_tagg{
+   .idDetails_tagg{
     display: flex;
     flex-wrap: nowrap;
   }
