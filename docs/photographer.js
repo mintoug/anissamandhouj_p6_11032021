@@ -229,7 +229,9 @@ function getLikes() {
 function saveLikes(list) {
     localStorage.setItem("newLikes",JSON.stringify(list));
 }
-
+ function clearLocalStorage(){
+     localStorage.clear();
+ }
     
 /**
  * CREATE NEW ARRAY MEDIAS FILTERED
@@ -592,6 +594,9 @@ function updateLikes(likes,nbLikes) {
                     if (nb.dataset.id == like.dataset.id) {
                         nb.innerHTML = (parseInt(nb.textContent) + 1) +" <i class='fas fa-heart liked mediaHeart'></i>"; 
                         document.querySelector(".b-likes-price-content").innerHTML = parseInt(document.querySelector(".b-likes-price-content").textContent) + 1 +" <i class='fas fa-heart'></i>";
+                    }
+                    else {
+                        clearLocalStorage();
                     }
                 });  
                }
