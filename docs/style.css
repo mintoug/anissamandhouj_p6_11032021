@@ -431,7 +431,7 @@ nav ul li a , .tags a, .idDetails-tagg-link > a{
 .mediasList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 95vw;
+  width: 97vw;
   list-style: none;
   margin-left: 5rem;
 }
@@ -675,10 +675,11 @@ font-size: 1.5rem;
   }
   .btn-contact{
     width:40%;
-    height:3rem ;
+    height:4rem ;
     position: fixed;
     bottom: 6rem;
     right: 30vw;
+    font-size: 0.8rem;
   }
   .mediasList{
     display:flex;
@@ -729,7 +730,7 @@ font-size: 1.5rem;
     position: relative;
     right: 2rem;
     background-color: #D3573C;
-    height: 100vh;
+    height: 100%;
   }
   .modal-contact-content > h1, .modal-contact-content .photographerName {
     font-size: 2.2rem;
@@ -750,5 +751,7 @@ font-size: 1.5rem;
 ul img{
   width: 100%;
 }
+.b-likes-price{
+  display: none;}
   }
 
