@@ -66,7 +66,7 @@ class Photographer {
 
   getHomeInfo() {
     let listTags = this.tags;
-    let textTag = ``;
+    let textTag = "";
     for (let tag in listTags) {
       textTag += `<li class="photographer-tags-link"><a href="index.html?tag=${listTags[tag]}"><span aria-label="tag">#${listTags[tag]}</span></a></li>`;
     }

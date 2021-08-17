@@ -34,7 +34,7 @@ let filterTag         = parsedUrl.searchParams.get("tag");
 let myFilterMedias    = [];
 let myTagFilterMedias = [];
 let aggLikes          = 0;
-let slideContent      = ``;
+let slideContent      = "";
 let dayPrice;
 let srcType;
 let slideIndex = 1;
@@ -78,7 +78,7 @@ class Photographer {
 
     getInfo() {
         let listTags = this.tags;
-        let textTag=``;
+        let textTag="";
         for (let tag in listTags) {
             textTag +=`<li class="idDetails-tagg-link"><a aria-label="tag" href="#" tabindex="4">#${listTags[tag]}</a></li>`;
         }
@@ -420,10 +420,10 @@ class MediasType {
         this.counter = counter;
     }
     getRender_Page() {
-        mediaList.innerHTML += ``;
+        mediaList.innerHTML += "";
     }
     getRender_Slide() {
-        slideContent +=``;
+        slideContent +="";
     }
 }
 

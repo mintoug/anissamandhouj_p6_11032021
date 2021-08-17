@@ -1,0 +1,28 @@
+{
+  "name": "anissamandhouj_p6_11032021",
+  "version": "1.0.0",
+  "description": "projet_6",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mintoug/anissamandhouj_p6_11032021.git"
+  },
+  "author": "anissa mandhouj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mintoug/anissamandhouj_p6_11032021/issues"
+  },
+  "homepage": "https://github.com/mintoug/anissamandhouj_p6_11032021#readme"
+}
