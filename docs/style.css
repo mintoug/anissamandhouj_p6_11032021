@@ -146,18 +146,18 @@ nav ul li a , .tags a, .idDetails-tagg-link > a{
        margin-bottom: 100px;
     }
    .header-banner-logo{
-     width: 60vw;
-     height: 5rem;
-     margin-left: -1rem;
+     width: 40vw;
+     height: 60px;
+     margin-left: -2rem;
    }
     .logo{
-      height: 70px;
+      height: 60px;
       width: 40vw;
       margin-top: 20px;
     }
     .title{
-      font-size: 1.2rem;
-      width: 35vw;
+      font-size: 1rem;
+      width: 40vw;
       float: right;
       margin-right: 0px;
       margin-top: 0px;
@@ -626,7 +626,7 @@ textarea {
   .b-idPhotographer{
     width: 97vw;
     height: max-content;
-    margin: 0 5vw;
+    margin: 0 2vw;
   }
   .header-banner{
     height: 3rem;
@@ -636,8 +636,11 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    left: -17rem;
+    left: -10rem;
     top: 5rem;
+  }
+  .tagg-link{
+    margin: 0 1px;
   }
  .photographer{
    padding-top: 8rem;
@@ -657,6 +660,9 @@ font-size: 1.5rem;
     flex-wrap: wrap;
     width: 100vw;
   } 
+  .photographer-tags-link, .idDetails-tagg-link{
+    margin: 0 1px;
+  }
   nav ul li a, .tags a, .idDetails-tagg-link > a{
   display: block;
   height: 30px;
@@ -727,6 +733,7 @@ font-size: 1.5rem;
     padding: 1rem;
     border-radius: 0.3rem;
     position: relative;
+    top: -20px;
     right: 2rem;
     background-color: #D3573C;
     height: 100%;
