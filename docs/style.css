@@ -566,7 +566,7 @@ input {
   border: none;
 }
 textarea {
-  height: 12rem;
+  height: auto;
   width: 100%;
   font-size: 1.5rem;
   font-family: "DM Sans", sans-serif;
