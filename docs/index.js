@@ -64,6 +64,7 @@ class Photographer {
     this.price = info.price;
   }
 
+
   getHomeInfo() {
     let listTags = this.tags;
     let textTag = "";

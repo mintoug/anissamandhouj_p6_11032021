@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/25333533ea.js" crossorigin="anonymous"></script>
     <title>fisheye-Photogpapher-page</title>
@@ -14,24 +14,26 @@
 
 <body>
 
-    <header class="header-banner">       
+    <header class="header-banner">
         <a href="index.html" aria-label="FishEye" role="image link" tabindex="1">
             <img src="./Photos/logo.jpg" alt="FishEye Home page" class="header-banner-logo">
-        </a>  
-    </header> 
-    <main>        
+        </a>
+    </header>
+    <main>
         <section class="b-idPhotographer">
-            <div class="idDetails"></div>  
-            <button name="contact" class="btn-contact" aria-haspopup="dialog" aria-controls="formContact" tabindex="5">Contactez-moi</button>               
-            <div class="idPicture" tabindex="6"></div>            
-        </section>    
- <!-- dropdown menu              -->
+            <div class="idDetails"></div>
+            <button name="contact" class="btn-contact" aria-haspopup="dialog" aria-controls="formContact"
+                tabindex="5">Contactez-moi</button>
+            <div class="idPicture" tabindex="6"></div>
+        </section>
+        <!-- dropdown menu              -->
         <section class="b-filter">
-            <p tabindex="8">Trier par :</p>            
+            <p tabindex="8">Trier par :</p>
             <div class="filter-dropdown">
-                <button id="filter-0" class="filter-dropdown-link" aria-haspopup="true" aria-expanded="false" tabindex="9">
+                <button id="filter-0" class="filter-dropdown-link" aria-haspopup="true" aria-expanded="false"
+                    tabindex="9">
                     <span id="filter-selected" class="filter-dropdown-link--content">Popularité</span>
-                    <i id="filterIcon" class="fas fa-chevron-down"></i>                    
+                    <i id="filterIcon" class="fas fa-chevron-down"></i>
                 </button>
                 <div class="dropdown-items">
                     <div class="dropdown-items-content">
@@ -39,22 +41,25 @@
                         <button id="filter-2" class="dropdown-items-link" tabindex="11">Titre</button>
                     </div>
                 </div>
-            </div>            
-        </section> 
- <!-- photos et videos         -->
+            </div>
+        </section>
+        <!-- photos et videos         -->
         <section class="b-works">
             <ul class="mediasList"></ul>
         </section>
-        <section id="lightbox" class="modal-lightbox" role="dialog" aria-label="Agrandissement de l'image">            
-            <span class="close-lightbox"><i class="fas fa-times" role="button" aria-label="Fermer la fenêtre"></i></span>
+        <section id="lightbox" class="modal-lightbox" role="dialog" aria-label="Agrandissement de l'image">
+            <span class="close-lightbox"><i class="fas fa-times" role="button"
+                    aria-label="Fermer la fenêtre"></i></span>
             <div class="modalLight-content"></div>
             <a class="previous"><i class="fas fa-chevron-left" role="link" aria-label="Image précédente"></i></a>
             <a class="next"><i class="fas fa-chevron-right" role="link" aria-label="Image suivante"></i></a>
-        </section>           
-    </main>      
-    <section role="dialog" aria-hidden="true" id="formContact" class="modal-contact" aria-labelledby="dial_Title" aria-describedby="dial_Desc">
+        </section>
+    </main>
+    <section role="dialog" aria-hidden="true" id="formContact" class="modal-contact" aria-labelledby="dial_Title"
+        aria-describedby="dial_Desc">
         <div class="modal-contact-content" id="modal-content" role="document">
-            <span class="close-form"><i class="fas fa-times" aria-label="Fermer" title="Fermer le formualire"></i></span>
+            <span class="close-form"><i class="fas fa-times" aria-label="Fermer"
+                    title="Fermer le formualire"></i></span>
             <h1 id="dial_Title" role="heading">Contactez-moi</h1>
             <span class="photographerName" id="dial_Desc"></span>
             <form id="frmContact" novalidate>
@@ -78,12 +83,12 @@
                     <textarea id="message" required title="Entrez votre message"></textarea>
                     <span class="error" aria-invalid="true" aria-label="error message"></span>
                 </p>
-                <button type="submit" class="btn-submit" aria-label="Envoi">Envoyer</button>                
+                <button type="submit" class="btn-submit" aria-label="Envoi">Envoyer</button>
             </form>
-        </div>            
-    </section>       
+        </div>
+    </section>
 
-   
+
     <script src="app.js"></script>
     <script src="photographer.js"></script>
 

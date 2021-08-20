@@ -65,7 +65,7 @@
      let valMail = mail.value;
      let isStr_firstName, isStr_lastName;
  
-     // check if there are numbers on first and last name ------------------------
+     // check if there are numbers on first and last name
      (valFirstName.match(isStrReg) == null) ? isStr_firstName = 0 : isStr_firstName = valFirstName.match(isStrReg).length;
      (valLastName.match(isStrReg) == null) ? isStr_lastName = 0 : isStr_lastName = valLastName.match(isStrReg).length;
  

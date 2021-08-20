@@ -104,7 +104,6 @@ class Photographer {
  * Description : 
  * On click > display the list of filters .......   function toggleFilter()
  *          > reorder the content on selection ..   function moveToFirst(element-content)
- * -----------------------------------------------------------------------------------------------------
  */
 
 dropFilterSelected.addEventListener("click", function(e) {
