@@ -6,7 +6,7 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
+    "dependencies": {
     "install": "^0.13.0"
   },
   "devDependencies": {

@@ -114,8 +114,7 @@ dropFilterSelected.addEventListener("click", function(e) {
 
 /**
  * FUNCTION toggleFilter()
- * Description : 
- * display the filter menu with aria-expanded attribute
+ * Description : display the filter menu with aria-expanded attribute
  */
 
 function toggleFilter () {
